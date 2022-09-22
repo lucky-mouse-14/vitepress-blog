@@ -1,6 +1,6 @@
 // 因为导航栏和侧边栏的代码较多，所以抽离出来
-const myNav = require('./nav.js')
-const mySidebar = require('./sidebar.js')
+import myNav from './nav'
+import mySideBar from './sidebar'
 
 module.exports = {
   title: "Lucky Mouse's blog", // 网站标题
@@ -10,11 +10,12 @@ module.exports = {
   markdown: {
     linNumbers: true, // 显示代码行数
   },
+  search: true,
   lastUpdated: true, // 以git提交的时间为更新时间
   themeConfig: {
     siteTitle: 'Lucky Mouse Blog',
     nav: myNav, // 导航栏配置
-    sidebar: mySidebar, // 侧边栏配置
+    sidebar: mySideBar, // 侧边栏配置
     author: 'Lucky Mouse',
     lastUpdatedText: '上次更新时间', // 最后更新时间文本
     logo: '/logo.jpg', // 导航栏左侧头像

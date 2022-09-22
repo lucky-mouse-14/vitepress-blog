@@ -1,10 +1,9 @@
-module.exports = {
-  // '/front/': [
-  //   {
-  //     text: 'MenuA',
-  //     items: [
-  //       { text: 'MenuA-1', link: '' }
-  //     ]
-  //   }
-  // ]
+import { createSideBar } from './utils/sidebar'
+
+export default {
+  '/front/': createSideBar('front'),
+  '/back/': createSideBar('back'),
+  '/learns/': createSideBar('learns'),
+  '/cases/': createSideBar('cases'),
+  '/uses/': createSideBar('uses'),
 }
